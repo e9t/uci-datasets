@@ -1,0 +1,2584 @@
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Classification</a> <font color=red>(163)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Regression</a> <font color=red>(23)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Clustering</a> <font color=red>(16)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Other</a> <font color=red>(48)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Categorical</a> <font color=red>(36)</font><br><a href='datasets.html?format=&task=&att=num&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Numerical</a> <font color=red>(111)</font><br><a href='datasets.html?format=&task=&att=mix&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Mixed</a> <font color=red>(56)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=mvar&sort=nameUp&view=table'>Multivariate</a> <font color=red>(178)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=uvar&sort=nameUp&view=table'>Univariate</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=seq&sort=nameUp&view=table'>Sequential</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=ts&sort=nameUp&view=table'>Time-Series</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table'>Text</a> <font color=red>(21)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=dt&sort=nameUp&view=table'>Domain-Theory</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=other&sort=nameUp&view=table'>Other</a> <font color=red>(21)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=life&numAtt=&numIns=&type=&sort=nameUp&view=table'>Life Sciences</a> <font color=red>(63)</font><br><a href='datasets.html?format=&task=&att=&area=phys&numAtt=&numIns=&type=&sort=nameUp&view=table'>Physical Sciences</a> <font color=red>(34)</font><br><a href='datasets.html?format=&task=&att=&area=comp&numAtt=&numIns=&type=&sort=nameUp&view=table'>CS / Engineering</a> <font color=red>(51)</font><br><a href='datasets.html?format=&task=&att=&area=soc&numAtt=&numIns=&type=&sort=nameUp&view=table'>Social Sciences</a> <font color=red>(16)</font><br><a href='datasets.html?format=&task=&att=&area=bus&numAtt=&numIns=&type=&sort=nameUp&view=table'>Business</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=&att=&area=game&numAtt=&numIns=&type=&sort=nameUp&view=table'>Game</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=table'>Other</a> <font color=red>(49)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=less10&numIns=&type=&sort=nameUp&view=table'>Less than 10</a> <font color=red>(50)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>10 to 100</a> <font color=red>(106)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=greater100&numIns=&type=&sort=nameUp&view=table'>Greater than 100</a> <font color=red>(35)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=less100&type=&sort=nameUp&view=table'>Less than 100</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=table'>100 to 1000</a> <font color=red>(90)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table'>Greater than 1000</a> <font color=red>(106)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Matrix</a> <font color=red>(167)</font><br><a href='datasets.html?format=nonmat&task=&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=table'>Non-Matrix</a> <font color=red>(68)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>235</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=nameDown&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Abalone"><img src="assets/MLimages/SmallLarge1.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Abalone">Abalone</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict the age of abalone from physical measurements&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">4177&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Adult"><img src="assets/MLimages/SmallLarge2.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Adult">Adult</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict whether income exceeds $50K/yr based on census data.  Also known as "Census Income" dataset.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">48842&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Annealing"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Annealing">Annealing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Steel annealing data&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">798&nbsp;</p></td>
+			<td><p class="normal">38&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Anonymous+Microsoft+Web+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Anonymous+Microsoft+Web+Data">Anonymous Microsoft Web Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Log of anonymous users of www.microsoft.com; predict areas of the web site a user visited based on data on other areas the user visited.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Recommender-Systems&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">37711&nbsp;</p></td>
+			<td><p class="normal">294&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Arrhythmia"><img src="assets/MLimages/SmallLarge5.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Arrhythmia">Arrhythmia</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Distinguish between the presence and absence of cardiac arrhythmia and classify it in one of the 16 groups.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">452&nbsp;</p></td>
+			<td><p class="normal">279&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Artificial+Characters"><img src="assets/MLimages/SmallLarge6.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Artificial+Characters">Artificial Characters</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset artificially generated by using first order theory which describes structure of ten capital letters of English alphabet&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">6000&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Audiology+%28Original%29"><img src="assets/MLimages/SmallLarge7.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Audiology+%28Original%29">Audiology (Original)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Nominal audiology dataset from Baylor&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">226&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Audiology+%28Standardized%29"><img src="assets/MLimages/SmallLarge7.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Audiology+%28Standardized%29">Audiology (Standardized)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Standardized version of the original audiology database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">226&nbsp;</p></td>
+			<td><p class="normal">69&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Auto+MPG"><img src="assets/MLimages/SmallLarge9.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Auto+MPG">Auto MPG</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Revised from CMU StatLib library, data concerns city-cycle fuel consumption&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">398&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Automobile"><img src="assets/MLimages/SmallLarge10.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Automobile">Automobile</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From 1985 Ward's Automotive Yearbook&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">205&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Badges"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Badges">Badges</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Badges labeled with a "+" or "-" as a function of a person's name&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">294&nbsp;</p></td>
+			<td><p class="normal">1&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Balance+Scale"><img src="assets/MLimages/SmallLarge12.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Balance+Scale">Balance Scale</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Balance scale weight & distance database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">625&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Balloons"><img src="assets/MLimages/SmallLarge13.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Balloons">Balloons</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data previously used in cognitive psychology experiment; 4 data sets represent different conditions of an experiment&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer">Breast Cancer</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Breast Cancer Data (Restricted Access)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">286&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29">Breast Cancer Wisconsin (Original)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Original Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">699&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prognostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">198&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Breast Cancer Wisconsin (Diagnostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Diagnostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">569&nbsp;</p></td>
+			<td><p class="normal">32&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Pittsburgh+Bridges"><img src="assets/MLimages/SmallLarge18.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pittsburgh+Bridges">Pittsburgh Bridges</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Bridges database that has original and numeric-discretized datasets&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">108&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Car+Evaluation"><img src="assets/MLimages/SmallLarge19.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Car+Evaluation">Car Evaluation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Derived from simple hierarchical decision model, this database may be useful for testing constructive induction and structure discovery methods.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">1728&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Census+Income"><img src="assets/MLimages/SmallLarge2.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Census+Income">Census Income</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict whether income exceeds $50K/yr based on census data.  Also known as "Adult" dataset.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">48842&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Chess+%28King-Rook+vs.+King-Knight%29"><img src="assets/MLimages/SmallLarge24.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Chess+%28King-Rook+vs.+King-Knight%29">Chess (King-Rook vs. King-Knight)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Knight Pin Chess End-Game Database Creator&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Chess+%28King-Rook+vs.+King-Pawn%29"><img src="assets/MLimages/SmallLarge24.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Chess+%28King-Rook+vs.+King-Pawn%29">Chess (King-Rook vs. King-Pawn)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">King+Rook versus King+Pawn on a7 (usually abbreviated KRKPA7).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">3196&nbsp;</p></td>
+			<td><p class="normal">36&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Chess+%28King-Rook+vs.+King%29"><img src="assets/MLimages/SmallLarge24.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Chess+%28King-Rook+vs.+King%29">Chess (King-Rook vs. King)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Chess Endgame Database for White King and Rook against Black King (KRK).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">28056&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Chess+%28Domain+Theories%29"><img src="assets/MLimages/SmallLarge24.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Chess+%28Domain+Theories%29">Chess (Domain Theories)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">6 different domain theories for generating legal moves of chess&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Bach+Chorales"><img src="assets/MLimages/SmallLarge25.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bach+Chorales">Bach Chorales</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Time-series data based on chorales; challenge is to learn generative grammar; data in Lisp&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">100&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connect-4"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connect-4">Connect-4</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Contains connect-4 positions&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Spatial&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">67557&nbsp;</p></td>
+			<td><p class="normal">42&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Credit+Approval"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Credit+Approval">Credit Approval</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data concerns credit card applications; good mix of attributes&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">690&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Financial&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Japanese+Credit+Screening"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Japanese+Credit+Screening">Japanese Credit Screening</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Includes domain theory (generated by talking to Japanese domain experts); data in Lisp&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real, Integer&nbsp;</p></td>
+			<td><p class="normal">125&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Financial&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Computer+Hardware"><img src="assets/MLimages/SmallLarge29.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Computer+Hardware">Computer Hardware</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Relative CPU Performance Data, described in terms of its cycle time, memory size, etc.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">209&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Contraceptive+Method+Choice"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Contraceptive+Method+Choice">Contraceptive Method Choice</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset is a subset of the 1987 National Indonesia Contraceptive Prevalence Survey.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">1473&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Covertype"><img src="assets/MLimages/SmallLarge31.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Covertype">Covertype</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Forest CoverType dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">581012&nbsp;</p></td>
+			<td><p class="normal">54&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cylinder+Bands"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cylinder+Bands">Cylinder Bands</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Used in decision tree induction for mitigating process delays known as "cylinder bands" in rotogravure printing&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">512&nbsp;</p></td>
+			<td><p class="normal">39&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dermatology"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dermatology">Dermatology</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Aim for this dataset is to determine the type of Eryhemato-Squamous Disease.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">366&nbsp;</p></td>
+			<td><p class="normal">33&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Diabetes"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Diabetes">Diabetes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This diabetes dataset is from AIM '94&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/DGP2+-+The+Second+Data+Generation+Program"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/DGP2+-+The+Second+Data+Generation+Program">DGP2 - The Second Data Generation Program</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Generates application domains based on specific parameters, number of features, and proportion of positive to negative examples&nbsp;</p></td> -->
+			<td><p class="normal">Data-Generator&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Document+Understanding"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Document+Understanding">Document Understanding</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Five concepts, expressed as predicates, to be learned&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EBL+Domain+Theories"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EBL+Domain+Theories">EBL Domain Theories</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Assorted small-scale domain theories&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Echocardiogram"><img src="assets/MLimages/SmallLarge38.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Echocardiogram">Echocardiogram</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data for classifying if patients will survive for at least one year after a heart attack&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">132&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Ecoli"><img src="assets/MLimages/SmallLarge120.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ecoli">Ecoli</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data contains protein localization sites&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">336&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Flags"><img src="assets/MLimages/SmallLarge40.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Flags">Flags</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From Collins Gem Guide to Flags, 1986&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">194&nbsp;</p></td>
+			<td><p class="normal">30&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Function+Finding"><img src="assets/MLimages/SmallLarge41.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Function+Finding">Function Finding</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Cases collected mostly from investigations in physical science; intention is to evaluate function-finding algorithms&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Function-Learning&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">352&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Glass+Identification"><img src="assets/MLimages/SmallLarge42.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Glass+Identification">Glass Identification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From USA Forensic Science Service; 6 types of glass; defined in terms of their oxide content (i.e. Na, Fe, K, etc)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">214&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Haberman%27s+Survival"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Haberman%27s+Survival">Haberman's Survival</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset contains cases from study conducted on the survival of patients who had undergone surgery for breast cancer&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">306&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Hayes-Roth"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Hayes-Roth">Hayes-Roth</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Topic: human subjects study&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">160&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Heart+Disease"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Heart+Disease">Heart Disease</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">4 databases: Cleveland, Hungary, Switzerland, and the VA Long Beach&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">303&nbsp;</p></td>
+			<td><p class="normal">75&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Hepatitis"><img src="assets/MLimages/SmallLarge46.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Hepatitis">Hepatitis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From G.Gong: CMU; Mostly Boolean or numeric-valued attribute types; Includes cost data (donated by Peter Turney)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">155&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Horse+Colic"><img src="assets/MLimages/SmallLarge47.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Horse+Colic">Horse Colic</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Well documented attributes; 368 instances with 28 attributes (continuous, discrete, and nominal); 30% missing values&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">368&nbsp;</p></td>
+			<td><p class="normal">27&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Housing"><img src="assets/MLimages/SmallLarge48.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Housing">Housing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Taken from StatLib library&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">506&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/ICU"><img src="assets/MLimages/SmallLarge49.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ICU">ICU</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data set prepared for the use of participants for the 1994 AAAI Spring Symposium on Artificial Intelligence in Medicine.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Image+Segmentation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Image+Segmentation">Image Segmentation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Image data described by high-level numeric-valued attributes, 7 classes&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2310&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Internet+Advertisements"><img src="assets/MLimages/SmallLarge51.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Internet+Advertisements">Internet Advertisements</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset represents a set of possible advertisements on Internet pages.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">3279&nbsp;</p></td>
+			<td><p class="normal">1558&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Ionosphere"><img src="assets/MLimages/SmallLarge52.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ionosphere">Ionosphere</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Classification of radar returns from the ionosphere&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">351&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Iris"><img src="assets/MLimages/SmallLarge53.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Iris">Iris</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Famous database; from Fisher, 1936&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">150&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/ISOLET"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ISOLET">ISOLET</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> Goal: Predict which letter-name was spoken--a simple classification task.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">7797&nbsp;</p></td>
+			<td><p class="normal">617&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Kinship"><img src="assets/MLimages/SmallLarge55.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Kinship">Kinship</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Relational dataset&nbsp;</p></td> -->
+			<td><p class="normal">Relational&nbsp;</p></td>
+			<td><p class="normal">Relational-Learning&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">104&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Labor+Relations"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Labor+Relations">Labor Relations</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From Collective Bargaining Review&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">57&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/LED+Display+Domain"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/LED+Display+Domain">LED Display Domain</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From Classification and Regression Trees book; We provide here 2 C programs for generating sample databases&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Lenses"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Lenses">Lenses</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Database for fitting contact lenses&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Letter+Recognition"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Letter+Recognition">Letter Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Database of character image features; try to identify the letter&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Liver+Disorders"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Liver+Disorders">Liver Disorders</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">BUPA Medical Research Ltd. database donated by Richard S. Forsyth&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">345&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Logic+Theorist"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Logic+Theorist">Logic Theorist</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">All code for Logic Theorist&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Lung+Cancer"><img src="assets/MLimages/SmallLarge62.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Lung+Cancer">Lung Cancer</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Lung cancer data; no attribute definitions&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">32&nbsp;</p></td>
+			<td><p class="normal">56&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Lymphography"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Lymphography">Lymphography</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This lymphography domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.  (Restricted access)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">148&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Mechanical+Analysis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mechanical+Analysis">Mechanical Analysis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Fault diagnosis problem of electromechanical devices; also PUMPS DATA SET is newer version with domain theory and results&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">209&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Meta-data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Meta-data">Meta-data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Meta-Data was used in order to give advice about which classification method is appropriate for a particular dataset (taken from results of Statlog project).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">528&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Mobile+Robots"><img src="assets/MLimages/SmallLarge66.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mobile+Robots">Mobile Robots</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Learning concepts from sensor data of a mobile robot; set of data sets&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Molecular+Biology+%28Promoter+Gene+Sequences%29"><img src="assets/MLimages/SmallLarge67.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Molecular+Biology+%28Promoter+Gene+Sequences%29">Molecular Biology (Promoter Gene Sequences)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">E. Coli promoter gene sequences (DNA) with partial domain theory&nbsp;</p></td> -->
+			<td><p class="normal">Sequential, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">106&nbsp;</p></td>
+			<td><p class="normal">58&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Molecular+Biology+%28Protein+Secondary+Structure%29"><img src="assets/MLimages/SmallLarge67.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Molecular+Biology+%28Protein+Secondary+Structure%29">Molecular Biology (Protein Secondary Structure)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From CMU connectionist bench repository; Classifies secondary structure of certain globular proteins&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">128&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Molecular+Biology+%28Splice-junction+Gene+Sequences%29"><img src="assets/MLimages/SmallLarge67.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Molecular+Biology+%28Splice-junction+Gene+Sequences%29">Molecular Biology (Splice-junction Gene Sequences)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Primate splice-junction gene sequences (DNA) with associated imperfect domain theory&nbsp;</p></td> -->
+			<td><p class="normal">Sequential, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">3190&nbsp;</p></td>
+			<td><p class="normal">61&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/MONK%27s+Problems"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MONK%27s+Problems">MONK's Problems</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A set of three artificial domains over the same attribute space; Used to test a wide range of induction algorithms&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">432&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Moral+Reasoner"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Moral+Reasoner">Moral Reasoner</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Horn-clause model that qualitatively simulates moral reasoning; Theory includes negated literals&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">202&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Multiple+Features"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Multiple+Features">Multiple Features</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset consists of features of handwritten numerals (`0'--`9') extracted from a collection of Dutch utility maps&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<td><p class="normal">649&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Mushroom"><img src="assets/MLimages/SmallLarge73.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mushroom">Mushroom</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From Audobon Society Field Guide; mushrooms described in terms of physical characteristics; classification: poisonous or edible&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">8124&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Musk+%28Version+1%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Musk+%28Version+1%29">Musk (Version 1)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The goal is to learn to predict whether new molecules will be musks or non-musks&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">476&nbsp;</p></td>
+			<td><p class="normal">168&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Musk+%28Version+2%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Musk+%28Version+2%29">Musk (Version 2)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The goal is to learn to predict whether new molecules will be musks or non-musks&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">6598&nbsp;</p></td>
+			<td><p class="normal">168&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Nursery"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Nursery">Nursery</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> Nursery Database was derived from a hierarchical decision model originally developed to rank applications for nursery schools.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">12960&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Othello+Domain+Theory"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Othello+Domain+Theory">Othello Domain Theory</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Used in research to generate features for an inductive learning system&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Page+Blocks+Classification"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Page+Blocks+Classification">Page Blocks Classification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The problem consists of classifying all the blocks of the page layout of a document that has been detected by a segmentation process.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">5473&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Pima+Indians+Diabetes"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pima+Indians+Diabetes">Pima Indians Diabetes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From National Institute of Diabetes and Digestive and Kidney Diseases; Includes cost data (donated by Peter Turney)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">768&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Optical+Recognition+of+Handwritten+Digits"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Optical+Recognition+of+Handwritten+Digits">Optical Recognition of Handwritten Digits</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two versions of this database available; see folder&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">5620&nbsp;</p></td>
+			<td><p class="normal">64&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Pen-Based+Recognition+of+Handwritten+Digits"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pen-Based+Recognition+of+Handwritten+Digits">Pen-Based Recognition of Handwritten Digits</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Digit database of 250 samples from 44 writers&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">10992&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Post-Operative+Patient"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Post-Operative+Patient">Post-Operative Patient</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset of patient features&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Primary+Tumor"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Primary+Tumor">Primary Tumor</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From Ljubljana Oncology Institute&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">339&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Prodigy"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Prodigy">Prodigy</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Assorted domains like blocksworld, eightpuzzle, and schedworld.&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Qualitative+Structure+Activity+Relationships"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Qualitative+Structure+Activity+Relationships">Qualitative Structure Activity Relationships</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two sets of datasets are given: pyrimidines and triazines&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Quadruped+Mammals"><img src="assets/MLimages/SmallLarge86.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Quadruped+Mammals">Quadruped Mammals</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> The file animals.c is a data generator of structured instances representing quadruped animals&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">72&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Servo"><img src="assets/MLimages/SmallLarge87.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Servo">Servo</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data was from a simulation of a servo system&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">167&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Shuttle+Landing+Control"><img src="assets/MLimages/SmallLarge92.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Shuttle+Landing+Control">Shuttle Landing Control</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Tiny database; all nominal values&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Solar+Flare"><img src="assets/MLimages/SmallLarge89.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Solar+Flare">Solar Flare</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Each class attribute counts the number of solar flares of a certain class that occur in a 24 hour period&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">1389&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Soybean+%28Large%29"><img src="assets/MLimages/SmallLarge90.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Soybean+%28Large%29">Soybean (Large)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Michalski's famous soybean disease database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">307&nbsp;</p></td>
+			<td><p class="normal">35&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Soybean+%28Small%29"><img src="assets/MLimages/SmallLarge90.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Soybean+%28Small%29">Soybean (Small)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Michalski's famous soybean disease database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">47&nbsp;</p></td>
+			<td><p class="normal">35&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Challenger+USA+Space+Shuttle+O-Ring"><img src="assets/MLimages/SmallLarge92.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Challenger+USA+Space+Shuttle+O-Ring">Challenger USA Space Shuttle O-Ring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Task: predict the number of O-rings that experience thermal distress on a flight at 31 degrees F given data on the previous 23 shuttle flights&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Low+Resolution+Spectrometer"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Low+Resolution+Spectrometer">Low Resolution Spectrometer</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From IRAS data -- NASA Ames Research Center&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">531&nbsp;</p></td>
+			<td><p class="normal">102&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Spambase"><img src="assets/MLimages/SmallLarge94.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Spambase">Spambase</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Classifying Email as Spam or Non-Spam&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">4601&nbsp;</p></td>
+			<td><p class="normal">57&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SPECT+Heart"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SPECT+Heart">SPECT Heart</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">267&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/SPECTF+Heart"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SPECTF+Heart">SPECTF Heart</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">267&nbsp;</p></td>
+			<td><p class="normal">44&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Sponge"><img src="assets/MLimages/SmallLarge97.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sponge">Sponge</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data on sponges; Attributes in spanish&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">76&nbsp;</p></td>
+			<td><p class="normal">45&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Statlog+Project"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+Project">Statlog Project</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Various Databases: Vehicle silhouttes, Landsat Sattelite, Shuttle, Australian Credit Approval, Heart Disease, Image Segmentation, German Credit&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Student+Loan+Relational"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Student+Loan+Relational">Student Loan Relational</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Student Loan Relational Domain&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Teaching+Assistant+Evaluation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Teaching+Assistant+Evaluation">Teaching Assistant Evaluation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data consist of evaluations of teaching performance; scores are "low", "medium", or "high"&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">151&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Tic-Tac-Toe+Endgame"><img src="assets/MLimages/SmallLarge101.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tic-Tac-Toe+Endgame">Tic-Tac-Toe Endgame</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Binary classification task on possible configurations of tic-tac-toe game&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">958&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Thyroid+Disease"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Thyroid+Disease">Thyroid Disease</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">10 separate databases from Garavan Institute&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">7200&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Trains"><img src="assets/MLimages/SmallLarge103.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Trains">Trains</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">2 data formats (structured, one-instance-per-line)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">32&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/University"><img src="assets/MLimages/SmallLarge104.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/University">University</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data in original (LISP-readable) form&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">285&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Congressional+Voting+Records"><img src="assets/MLimages/SmallLarge105.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Congressional+Voting+Records">Congressional Voting Records</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">1984 United Stated Congressional Voting Records; Classify as Republican or Democrat&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">435&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Water+Treatment+Plant"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Water+Treatment+Plant">Water Treatment Plant</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multiple classes predict plant state&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">527&nbsp;</p></td>
+			<td><p class="normal">38&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Waveform+Database+Generator+%28Version+1%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Waveform+Database+Generator+%28Version+1%29">Waveform Database Generator (Version 1)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">CART book's waveform domains&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5000&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Waveform+Database+Generator+%28Version+2%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Waveform+Database+Generator+%28Version+2%29">Waveform Database Generator (Version 2)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">CART book's waveform domains&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5000&nbsp;</p></td>
+			<td><p class="normal">40&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Wine"><img src="assets/MLimages/SmallLarge109.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine">Wine</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Using chemical analysis determine the origin of wines&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">178&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Yeast"><img src="assets/MLimages/SmallLarge110.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Yeast">Yeast</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predicting the Cellular Localization Sites of Proteins&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1484&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Zoo"><img src="assets/MLimages/SmallLarge111.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Zoo">Zoo</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Artificial, 7 classes of animals&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">101&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Undocumented"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Undocumented">Undocumented</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Various datasets without documentation (feel free to explore!)&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Twenty+Newsgroups"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Twenty+Newsgroups">Twenty Newsgroups</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set consists of 20000 messages taken from 20 newsgroups.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">6650&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2565&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2002&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/US+Census+Data+%281990%29"><img src="assets/MLimages/SmallLarge2.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/US+Census+Data+%281990%29">US Census Data (1990)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The USCensus1990raw data set contains a one percent sample of the Public Use Microdata Samples (PUMS) person records drawn from the full 1990 census sample.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">2458285&nbsp;</p></td>
+			<td><p class="normal">68&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Census-Income+%28KDD%29"><img src="assets/MLimages/SmallLarge2.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Census-Income+%28KDD%29">Census-Income (KDD)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains weighted census data extracted from the 1994 and 1995 current population surveys conducted by the U.S. Census Bureau.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">299285&nbsp;</p></td>
+			<td><p class="normal">40&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Coil+1999+Competition+Data"><img src="assets/MLimages/SmallLarge118.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Coil+1999+Competition+Data">Coil 1999 Competition Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set is from the 1999 Computational Intelligence and Learning (COIL) competition. The data contains measurements of river chemical concentrations and algae densities.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">340&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Corel+Image+Features"><img src="assets/MLimages/SmallLarge119.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Corel+Image+Features">Corel Image Features</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains image features extracted from a Corel image collection. Four sets of features are available based on the color histogram, color histogram layout, color moments, and co-occurence&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">68040&nbsp;</p></td>
+			<td><p class="normal">89&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/E.+Coli+Genes"><img src="assets/MLimages/SmallLarge120.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/E.+Coli+Genes">E. Coli Genes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data giving characteristics of each ORF (potential gene) in the E. coli genome. Sequence, homology (similarity to other genes) and structural information, and function (if known) are provided.&nbsp;</p></td> -->
+			<td><p class="normal">Relational&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EEG+Database"><img src="assets/MLimages/SmallLarge121.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Database">EEG Database</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data arises from a large study to examine EEG correlates of genetic predisposition to alcoholism. It contains measurements from 64 electrodes placed on the scalp sampled at 256 Hz&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">122&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/El+Nino"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/El+Nino">El Nino</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific.&nbsp;</p></td> -->
+			<td><p class="normal">Spatio-temporal&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">178080&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Entree+Chicago+Recommendation+Data"><img src="assets/MLimages/SmallLarge123.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Entree+Chicago+Recommendation+Data">Entree Chicago Recommendation Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data contains a record of user interactions with the Entree Chicago restaurant recommendation system.&nbsp;</p></td> -->
+			<td><p class="normal">Transactional, Sequential&nbsp;</p></td>
+			<td><p class="normal">Recommender-Systems&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">50672&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CMU+Face+Images"><img src="assets/MLimages/SmallLarge124.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CMU+Face+Images">CMU Face Images</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of 640 black and white face images of people taken with varying pose (straight, left, right, up), expression (neutral, happy, sad, angry), eyes (wearing sunglasses or not), and size&nbsp;</p></td> -->
+			<td><p class="normal">Image&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">640&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Insurance+Company+Benchmark+%28COIL+2000%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Insurance+Company+Benchmark+%28COIL+2000%29">Insurance Company Benchmark (COIL 2000)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set used in the CoIL 2000 Challenge contains information on customers of an insurance company. The data consists of 86 variables and includes product usage data and socio-demographic data&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression, Description&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">9000&nbsp;</p></td>
+			<td><p class="normal">86&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Internet+Usage+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Internet+Usage+Data">Internet Usage Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data contains general demographic information on internet users in 1997.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">10104&nbsp;</p></td>
+			<td><p class="normal">72&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/IPUMS+Census+Database"><img src="assets/MLimages/SmallLarge2.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/IPUMS+Census+Database">IPUMS Census Database</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains unweighted PUMS census data from the Los Angeles and Long Beach areas for the years 1970, 1980, and 1990.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">256932&nbsp;</p></td>
+			<td><p class="normal">61&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Japanese+Vowels"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Japanese+Vowels">Japanese Vowels</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset records 640 time series of 12 LPC cepstrum coefficients taken from nine male speakers.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">640&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KDD+Cup+1998+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDD+Cup+1998+Data">KDD Cup 1998 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is the data set used for The Second International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-98&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">191779&nbsp;</p></td>
+			<td><p class="normal">481&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KDD+Cup+1999+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDD+Cup+1999+Data">KDD Cup 1999 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is the data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">4000000&nbsp;</p></td>
+			<td><p class="normal">42&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/M.+Tuberculosis+Genes"><img src="assets/MLimages/SmallLarge131.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/M.+Tuberculosis+Genes">M. Tuberculosis Genes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> Data giving characteristics of each ORF (potential gene) in the M. tuberculosis bacterium. Sequence, homology (similarity to other genes) and structural information, and function (if known) are provided&nbsp;</p></td> -->
+			<td><p class="normal">Relational&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Movie"><img src="assets/MLimages/SmallLarge132.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Movie">Movie</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains a list of over 10000 films including many older, odd, and cult films. There is information on actors, casts, directors, producers, studios, etc.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Relational&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/MSNBC.com+Anonymous+Web+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MSNBC.com+Anonymous+Web+Data">MSNBC.com Anonymous Web Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data describes the page visits of users who visited msnbc.com on September 28, 1999. Visits are recorded at the level of URL category (see description) and are recorded in time order.&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">989818&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/NSF+Research+Award+Abstracts+1990-2003"><img src="assets/MLimages/SmallLarge134.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/NSF+Research+Award+Abstracts+1990-2003">NSF Research Award Abstracts 1990-2003</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set consists of (a) 129,000 abstracts describing NSF awards for basic research, (b) bag-of-word data files extracted from the abstracts, (c) a list of words used for indexing the bag-of-word&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">129000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2003&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Pioneer-1+Mobile+Robot+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pioneer-1+Mobile+Robot+Data">Pioneer-1 Mobile Robot Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains time series sensor readings of the Pioneer-1 mobile robot. The data is broken into "experiences" in which the robot takes action for some period of time and experiences a control&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Pseudo+Periodic+Synthetic+Time+Series"><img src="assets/MLimages/SmallLarge136.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pseudo+Periodic+Synthetic+Time+Series">Pseudo Periodic Synthetic Time Series</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set is designed for testing indexing schemes in time series databases. The data appears highly periodic, but never exactly repeats itself.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Reuters-21578+Text+Categorization+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters-21578+Text+Categorization+Collection">Reuters-21578 Text Categorization Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a collection of documents that appeared on Reuters newswire in 1987. The documents were assembled and indexed with categories.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">21578&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Robot+Execution+Failures"><img src="assets/MLimages/SmallLarge138.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Robot+Execution+Failures">Robot Execution Failures</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by 15 force/torque samples collected at regular time intervals&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">463&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Synthetic+Control+Chart+Time+Series"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Synthetic+Control+Chart+Time+Series">Synthetic Control Chart Time Series</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of synthetically generated control charts.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">600&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Syskill+and+Webert+Web+Page+Ratings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Syskill+and+Webert+Web+Page+Ratings">Syskill and Webert Web Page Ratings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This database contains HTML source of web pages plus the ratings of a single user on these web pages. Web pages are on four seperate subjects (Bands- recording artists; Goats; Sheep; and BioMedical)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">332&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/UNIX+User+Data"><img src="assets/MLimages/SmallLarge141.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UNIX+User+Data">UNIX User Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This file contains 9 sets of sanitized user data drawn from the command histories of 8 UNIX computer users at Purdue over the course of up to 2 years.&nbsp;</p></td> -->
+			<td><p class="normal">Text, Sequential&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Volcanoes+on+Venus+-+JARtool+experiment"><img src="assets/MLimages/SmallLarge142.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Volcanoes+on+Venus+-+JARtool+experiment">Volcanoes on Venus - JARtool experiment</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The JARtool project was a pioneering effort to develop an automatic system for cataloging small volcanoes in the large set of Venus images returned by the Magellan spacecraft.&nbsp;</p></td> -->
+			<td><p class="normal">Image&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Australian+Credit+Approval%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Australian+Credit+Approval%29">Statlog (Australian Credit Approval)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This file concerns credit card applications. This database exists elsewhere in the repository (Credit Screening Database) in a slightly different form&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">690&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Financial&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Statlog+%28German+Credit+Data%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28German+Credit+Data%29">Statlog (German Credit Data)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset classifies people described by a set of attributes as good or bad credit risks. Comes in two formats (one all numeric). Also comes with a cost matrix&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">1000&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Financial&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Heart%29"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Heart%29">Statlog (Heart)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is a heart disease database similar to a database already present in the repository (Heart Disease databases) but in a slightly different form&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">270&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Statlog+%28Landsat+Satellite%29"><img src="assets/MLimages/SmallLarge146.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Landsat+Satellite%29">Statlog (Landsat Satellite)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">6435&nbsp;</p></td>
+			<td><p class="normal">36&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Image+Segmentation%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Image+Segmentation%29">Statlog (Image Segmentation)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is an image segmentation database similar to a database already present in the repository (Image segmentation database) but in a slightly different form.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2310&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Statlog+%28Shuttle%29"><img src="assets/MLimages/SmallLarge92.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Shuttle%29">Statlog (Shuttle)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The shuttle dataset contains 9 attributes all of which are numerical. Approximately 80% of the data belongs to class 1&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">58000&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Vehicle+Silhouettes%29"><img src="assets/MLimages/SmallLarge149.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Vehicle+Silhouettes%29">Statlog (Vehicle Silhouettes)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">946&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Nettalk+Corpus%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Nettalk+Corpus%29">Connectionist Bench (Nettalk Corpus)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The file "nettalk.data" contains a list of 20,008 English words, along with a phonetic transcription for each word. The task is to train a network to produce the proper phonemes&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">20008&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29">Connectionist Bench (Sonar, Mines vs. Rocks)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The task is to train a network to discriminate between sonar signals bounced off a metal cylinder and those bounced off a roughly cylindrical rock.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">208&nbsp;</p></td>
+			<td><p class="normal">60&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Vowel+Recognition+-+Deterding+Data%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Vowel+Recognition+-+Deterding+Data%29">Connectionist Bench (Vowel Recognition - Deterding Data)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Speaker independent recognition of the eleven steady state vowels of British English using a specified training set of lpc derived log area ratios.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">528&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Economic+Sanctions"><img src="assets/MLimages/SmallLarge153.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Economic+Sanctions">Economic Sanctions</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Domain Theory on Economic Sanctions; Undocumented&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Financial&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Protein+Data"><img src="assets/MLimages/SmallLarge154.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Protein+Data">Protein Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Undocumented&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Cloud"><img src="assets/MLimages/SmallLarge155.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cloud">Cloud</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Little Documentation&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1024&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CalIt2+Building+People+Counts"><img src="assets/MLimages/SmallLarge156.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CalIt2+Building+People+Counts">CalIt2 Building People Counts</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data comes from the main door of the CalIt2 building at UCI.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">10080&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2006&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dodgers+Loop+Sensor"><img src="assets/MLimages/SmallLarge157.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dodgers+Loop+Sensor">Dodgers Loop Sensor</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Loop sensor data was collected for the Glendale on ramp for the 101 North freeway in Los Angeles&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">50400&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2006&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Poker+Hand"><img src="assets/MLimages/SmallLarge158.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Poker+Hand">Poker Hand</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Purpose is to predict poker hands&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">1025010&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/MAGIC+Gamma+Telescope"><img src="assets/MLimages/SmallLarge159.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MAGIC+Gamma+Telescope">MAGIC Gamma Telescope</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data are MC generated to simulate registration of high energy gamma particles in an atmospheric Cherenkov telescope&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">19020&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/UJI+Pen+Characters"><img src="assets/MLimages/SmallLarge160.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UJI+Pen+Characters">UJI Pen Characters</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data consists of written characters in a UNIPEN-like format&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1364&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Mammographic+Mass"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mammographic+Mass">Mammographic Mass</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Discrimination of benign and malignant mammographic masses based on BI-RADS attributes and the patient's age.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">961&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Forest+Fires"><img src="assets/MLimages/SmallLarge162.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Forest+Fires">Forest Fires</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a difficult regression task, where the aim is to predict the burned area of forest fires, in the northeast region of Portugal, by using meteorological and other data (see details at: http://www.dsi.uminho.pt/~pcortez/forestfires).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">517&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Reuters+Transcribed+Subset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters+Transcribed+Subset">Reuters Transcribed Subset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is created by reading out 200 files from the 10 largest Reuters 
+classes and using an Automatic Speech Recognition system to create 
+corresponding transcriptions.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">200&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Bag+of+Words"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bag+of+Words">Bag of Words</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains five text collections in the form of bags-of-words.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">8000000&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Concrete+Compressive+Strength"><img src="assets/MLimages/SmallLarge165.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Concrete+Compressive+Strength">Concrete Compressive Strength</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Concrete is the most important material in civil engineering. The concrete compressive strength is a highly nonlinear function of age and ingredients. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1030&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Hill-Valley"><img src="assets/MLimages/SmallLarge166.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Hill-Valley">Hill-Valley</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Each record represents 100 points on a two-dimensional graph. When plotted in order (from 1 through 100) as the Y co-ordinate, the points will create either a Hill (a ìbumpî in the terrain) or a Valley (a ìdipî in the terrain).&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">606&nbsp;</p></td>
+			<td><p class="normal">101&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Arcene"><img src="assets/MLimages/SmallLarge167.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Arcene">Arcene</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">ARCENE's task is to distinguish cancer versus normal patterns from mass-spectrometric data. This is a two-class classification problem with continuous input variables. This dataset is one of 5 datasets of the NIPS 2003 feature selection challenge.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">900&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Dexter"><img src="assets/MLimages/SmallLarge168.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dexter">Dexter</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">DEXTER is a text classification problem in a bag-of-word representation. This is a two-class classification problem with sparse continuous input variables. This dataset is one of five datasets of the NIPS 2003 feature selection challenge.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">2600&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dorothea"><img src="assets/MLimages/SmallLarge169.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dorothea">Dorothea</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">DOROTHEA is a drug discovery dataset. Chemical compounds represented by structural molecular features must be classified as active (binding to thrombin) or inactive. This is one of 5 datasets of the NIPS 2003 feature selection challenge.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1950&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gisette"><img src="assets/MLimages/SmallLarge170.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gisette">Gisette</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">GISETTE is a handwritten digit recognition problem. The problem is to separate the highly confusible digits '4' and '9'. This dataset is one of five datasets of the NIPS 2003 feature selection challenge.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">13500&nbsp;</p></td>
+			<td><p class="normal">5000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Madelon"><img src="assets/MLimages/SmallLarge171.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Madelon">Madelon</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">MADELON is an artificial dataset, which was part of the NIPS 2003 feature selection challenge. This is a two-class classification problem with continuous input variables. The difficulty is that the problem is multivariate and highly non-linear. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4400&nbsp;</p></td>
+			<td><p class="normal">500&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Ozone+Level+Detection"><img src="assets/MLimages/SmallLarge172.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2536&nbsp;</p></td>
+			<td><p class="normal">73&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Abscisic+Acid+Signaling+Network"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Abscisic+Acid+Signaling+Network">Abscisic Acid Signaling Network</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The objective is to determine the set of boolean rules that describe the interactions of the nodes within this plant signaling network.  The dataset includes 300 separate boolean pseudodynamic simulations using an asynchronous update scheme. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">300&nbsp;</p></td>
+			<td><p class="normal">43&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Parkinsons"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons">Parkinsons</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Detection Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">197&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Character+Trajectories"><img src="assets/MLimages/SmallLarge175.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Character+Trajectories">Character Trajectories</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multiple, labelled samples of pen tip trajectories recorded whilst writing individual characters. All samples are from the same writer, for the purposes of primitive extraction. Only characters with a single pen-down segment were considered.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2858&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Blood+Transfusion+Service+Center"><img src="assets/MLimages/SmallLarge176.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Blood+Transfusion+Service+Center">Blood Transfusion Service Center</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data taken from the Blood Transfusion Service Center in Hsin-Chu City in Taiwan -- this is a classification problem. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">748&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/UJI+Pen+Characters+%28Version+2%29"><img src="assets/MLimages/SmallLarge160.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UJI+Pen+Characters+%28Version+2%29">UJI Pen Characters (Version 2)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A pen-based database with more than 11k isolated handwritten characters&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">11640&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Semeion+Handwritten+Digit"><img src="assets/MLimages/SmallLarge178.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Semeion+Handwritten+Digit">Semeion Handwritten Digit</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">1593 handwritten digits from around 80 persons were scanned, stretched in a rectangular box 16x16 in a gray scale of 256 values.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1593&nbsp;</p></td>
+			<td><p class="normal">256&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SECOM"><img src="assets/MLimages/SmallLarge179.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SECOM">SECOM</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data from a semi-conductor manufacturing process&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1567&nbsp;</p></td>
+			<td><p class="normal">591&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Plants"><img src="assets/MLimages/SmallLarge180.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Plants">Plants</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data has been extracted from the USDA plants database. It contains all plants (species and genera) in the database and the states of USA and Canada where they occur.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">22632&nbsp;</p></td>
+			<td><p class="normal">70&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Libras+Movement"><img src="assets/MLimages/SmallLarge181.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Libras+Movement">Libras Movement</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'LÕngua BRAsileira de Sinais', oficial brazilian signal language).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">360&nbsp;</p></td>
+			<td><p class="normal">91&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Concrete+Slump+Test"><img src="assets/MLimages/SmallLarge165.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Concrete+Slump+Test">Concrete Slump Test</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Concrete is a highly complex material. The slump flow of concrete is not only determined by the water content, but that is also influenced by other concrete ingredients.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">103&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Communities+and+Crime"><img src="assets/MLimages/SmallLarge183.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Communities+and+Crime">Communities and Crime</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Communities within the United States. The data combines socio-economic data from the 1990 US Census, law enforcement data from the 1990 US LEMAS survey, and crime data from the 1995 FBI UCR.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<td><p class="normal">128&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Acute+Inflammations"><img src="assets/MLimages/SmallLarge184.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Acute+Inflammations">Acute Inflammations</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data was created by a medical expert as a data set to test the expert system, 
+which will perform the presumptive diagnosis of two diseases of the urinary system.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">120&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Wine+Quality"><img src="assets/MLimages/SmallLarge186.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine+Quality">Wine Quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two datasets are included, related to red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009], http://www3.dsi.uminho.pt/pcortez/wine/).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4898&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/URL+Reputation"><img src="assets/MLimages/SmallLarge187.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/URL+Reputation">URL Reputation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Anonymized 120-day subset of the ICML-09 URL data containing 2.4 million examples and 3.2 million features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">2396130&nbsp;</p></td>
+			<td><p class="normal">3231961&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/p53+Mutants"><img src="assets/MLimages/SmallLarge188.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/p53+Mutants">p53 Mutants</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The goal is to model mutant p53 transcriptional activity (active vs inactive) based on data extracted from biophysical simulations.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">16772&nbsp;</p></td>
+			<td><p class="normal">5409&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Parkinsons+Telemonitoring"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons+Telemonitoring">Parkinsons Telemonitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Telemonitoring Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">5875&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Demospongiae"><img src="assets/MLimages/SmallLarge190.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Demospongiae">Demospongiae</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Marine sponges of the Demospongiae class classification domain.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">503&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Opinosis+Opinion+%26frasl%3B+Review"><img src="assets/MLimages/SmallLarge191.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Opinosis+Opinion+%26frasl%3B+Review">Opinosis Opinion &frasl; Review</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains sentences extracted from user reviews on a given topic. Example topics are ‚Äúperformance of Toyota Camry‚Äù and ‚Äúsound quality of ipod nano‚Äù. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">51&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Tissue"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Tissue">Breast Tissue</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset with electrical impedance measurements of freshly excised tissue samples from the breast.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">106&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cardiotocography"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cardiotocography">Cardiotocography</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2126&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Wall-Following+Robot+Navigation+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wall-Following+Robot+Navigation+Data">Wall-Following Robot Navigation Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5456&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Spoken+Arabic+Digit"><img src="assets/MLimages/SmallLarge195.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Spoken+Arabic+Digit">Spoken Arabic Digit</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains timeseries of mel-frequency cepstrum coefficients (MFCCs) corresponding to spoken Arabic digits.  Includes data from 44 male and 44 female native Arabic speakers.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">8800&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Localization+Data+for+Person+Activity"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Localization+Data+for+Person+Activity">Localization Data for Person Activity</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data contains recordings of five people performing different activities. Each person wore four sensors (tags) while performing the same scenario five times. &nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">164860&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/AutoUniv"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/AutoUniv">AutoUniv</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">AutoUniv is an advanced data generator for classifications tasks. The aim is to reflect the nuances and heterogeneity of real data.  Data can be generated in .csv, ARFF or C4.5 formats.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer, Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Steel+Plates+Faults"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Steel+Plates+Faults">Steel Plates Faults</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A dataset of steel plates‚Äô faults, classified into 7 different types. 
+The goal was to train machine learning for automatic pattern recognition.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">1941&nbsp;</p></td>
+			<td><p class="normal">27&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/MiniBooNE+particle+identification"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MiniBooNE+particle+identification">MiniBooNE particle identification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is taken from the MiniBooNE experiment and is used to distinguish electron neutrinos (signal) from muon neutrinos (background).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">130065&nbsp;</p></td>
+			<td><p class="normal">50&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/YearPredictionMSD"><img src="assets/MLimages/SmallLarge203.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YearPredictionMSD">YearPredictionMSD</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prediction of the release year of a song from audio features. Songs are mostly western, commercial tracks ranging from 1922 to 2011, with a peak in the year 2000s.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">515345&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PEMS-SF"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PEMS-SF">PEMS-SF</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">15 months worth of daily data (440 daily records) that describes the occupancy rate, between 0 and 1, of different car lanes of the San Francisco bay area freeways across time.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">440&nbsp;</p></td>
+			<td><p class="normal">138672&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/OpinRank+Review+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/OpinRank+Review+Dataset">OpinRank Review Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains user reviews of cars and and hotels collected from Tripadvisor (~259,000 
+reviews) and Edmunds (~42,230 reviews).   &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Relative+location+of+CT+slices+on+axial+axis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Relative+location+of+CT+slices+on+axial+axis">Relative location of CT slices on axial axis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset consists of 384 features extracted from CT images. The class variable is numeric and denotes the relative location of the CT slice on the axial axis of the human body.&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">53500&nbsp;</p></td>
+			<td><p class="normal">386&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Online+Handwritten+Assamese+Characters+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Online+Handwritten+Assamese+Characters+Dataset">Online Handwritten Assamese Characters Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a dataset of 8235 online handwritten assamese characters. The ‚Äúonline‚Äù process involves capturing of data as text is written on a digitizing tablet with an electronic pen.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">8235&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PubChem+Bioassay+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PubChem+Bioassay+Data">PubChem Bioassay Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">These highly imbalanced bioassay datasets are from the differing types of screening that can be performed using HTS technology. 21 datasets were created from 12 bioassays.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Record+Linkage+Comparison+Patterns"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Record+Linkage+Comparison+Patterns">Record Linkage Comparison Patterns</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Element-wise comparison of records with personal data from a record linkage setting. The task is to decide from a comparison pattern whether the underlying records belong to one person.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5749132&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Communities+and+Crime+Unnormalized"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Communities+and+Crime+Unnormalized">Communities and Crime Unnormalized</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Communities in the US. Data combines socio-economic data from the '90 Census, law enforcement data from the 1990 Law Enforcement Management and Admin Stats survey, and crime data from the 1995 FBI UCR&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2215&nbsp;</p></td>
+			<td><p class="normal">147&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Vertebral+Column"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Vertebral+Column">Vertebral Column</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data set containing values for six biomechanical features used to classify orthopaedic patients into 3 classes (normal, disk hernia or spondilolysthesis) or 2 classes (normal or abnormal).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">310&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/EMG+Physical+Action+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EMG+Physical+Action+Data+Set">EMG Physical Action Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 4 subjects using the Delsys EMG wireless apparatus.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Vicon+Physical+Action+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Vicon+Physical+Action+Data+Set">Vicon Physical Action Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 10 subjects using the Vicon 3D tracker.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">27&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Amazon+Commerce+reviews+set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Amazon+Commerce+reviews+set">Amazon Commerce reviews set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is used for authorship identification in online Writeprint which is a new research field of pattern recognition. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1500&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Amazon+Access+Samples"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Amazon+Access+Samples">Amazon Access Samples</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Amazon's InfoSec is getting smarter about the way Access data is leveraged. This is an anonymized sample of access provisioned within the company.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Regression, Clustering, Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">30000&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Reuter_50_50"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuter_50_50">Reuter_50_50</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is used for authorship identification in online Writeprint which is a new research field of pattern recognition. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2500&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Farm+Ads"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Farm+Ads">Farm Ads</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data was collected from text ads found on twelve websites that deal with various farm animal related topics.  The binary labels are based on whether or not the content owner approves of the ad.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">4143&nbsp;</p></td>
+			<td><p class="normal">54877&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/DBWorld+e-mails"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/DBWorld+e-mails">DBWorld e-mails</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It contains 64 e-mails which I have manually collected from DBWorld mailing list. They are classified in: 'announces of conferences' and 'everything else'.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">64&nbsp;</p></td>
+			<td><p class="normal">4702&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">53414&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">65554&nbsp;</p></td>
+			<td><p class="normal">29&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Bank+Marketing"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bank+Marketing">Bank Marketing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">45211&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/YouTube+Comedy+Slam+Preference+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YouTube+Comedy+Slam+Preference+Data">YouTube Comedy Slam Preference Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset provides user vote data on which video from a pair of videos is funnier collected on YouTube Comedy Slam. The task is to automatically predict this preference based on video metadata.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1138562&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Gas+Sensor+Array+Drift+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+Sensor+Array+Drift+Dataset">Gas Sensor Array Drift Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This archive contains 13910 measurements from 16 chemical sensors utilized in simulations for drift compensation in a discrimination task of 6 gases at various levels of concentrations.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">13910&nbsp;</p></td>
+			<td><p class="normal">128&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29">ILPD (Indian Liver Patient Dataset)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains 10 variables that are age, gender, total Bilirubin, direct Bilirubin, total proteins, albumin, A/G ratio, SGPT, SGOT and Alkphos.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">583&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/OPPORTUNITY+Activity+Recognition"><img src="assets/MLimages/SmallLarge226.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/OPPORTUNITY+Activity+Recognition">OPPORTUNITY Activity Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The OPPORTUNITY Dataset for Human Activity Recognition from Wearable, Object, and Ambient Sensors is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2551&nbsp;</p></td>
+			<td><p class="normal">242&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Nomao"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Nomao">Nomao</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Nomao collects data about places (name, phone, localization...) from many sources.
+Deduplication consists in detecting what data refer to the same place.
+Instances in the dataset compare 2 spots.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">34465&nbsp;</p></td>
+			<td><p class="normal">120&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SMS+Spam+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SMS+Spam+Collection">SMS Spam Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The SMS Spam Collection is a public set of SMS labeled messages that have been collected for mobile phone spam research.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5574&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Skin+Segmentation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Skin+Segmentation">Skin Segmentation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Skin Segmentation dataset is constructed over B, G, R color space. Skin and Nonskin dataset is generated using skin textures from face images of diversity of age, gender, and race people.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">245057&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Planning+Relax"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Planning+Relax">Planning Relax</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset concerns with the classification of two mental stages from recorded EEG signals: Planning (during imagination of motor act) and Relax state. &nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">182&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PAMAP2+Physical+Activity+Monitoring"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PAMAP2+Physical+Activity+Monitoring">PAMAP2 Physical Activity Monitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The PAMAP2 Physical Activity Monitoring dataset contains data of 18 different physical activities, performed by 9 subjects wearing 3 inertial measurement units and a heart rate monitor.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3850505&nbsp;</p></td>
+			<td><p class="normal">52&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Restaurant+%26+consumer+data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Restaurant+%26+consumer+data">Restaurant & consumer data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset was obtained from a recommender system prototype. The task was to generate a top-n list of restaurants according to the consumer preferences. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">138&nbsp;</p></td>
+			<td><p class="normal">47&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CNAE-9"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CNAE-9">CNAE-9</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a
+subset of 9 categories&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1080&nbsp;</p></td>
+			<td><p class="normal">857&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Individual+household+electric+power+consumption"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Individual+household+electric+power+consumption">Individual household electric power consumption</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2075259&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/seeds"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/seeds">seeds</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Measurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">210&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Northix"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Northix">Northix</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Northix is designed to be a schema matching benchmark problem for data integration of two entity relationship databases. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">115&nbsp;</p></td>
+			<td><p class="normal">200&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/QtyT40I10D100K"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/QtyT40I10D100K">QtyT40I10D100K</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Since there is no numerical sequential data stream available in standard data sets, this data set is generated from the original T40I10D100K data set&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3960456&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Legal+Case+Reports"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Legal+Case+Reports">Legal Case Reports</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A textual corpus of 4000 legal cases for automatic summarization and citation analysis. For each document we collect catchphrases, citations sentences, citation catchphrases and citation classes.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Human+Activity+Recognition+Using+Smartphones"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Human+Activity+Recognition+Using+Smartphones">Human Activity Recognition Using Smartphones</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">10299&nbsp;</p></td>
+			<td><p class="normal">561&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/One-hundred+plant+species+leaves+data+set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/One-hundred+plant+species+leaves+data+set">One-hundred plant species leaves data set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Sixteen samples of leaf each of one-hundred plant species. For each sample, a shape descriptor, fine scale margin and texture histogram are given.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1600&nbsp;</p></td>
+			<td><p class="normal">64&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
