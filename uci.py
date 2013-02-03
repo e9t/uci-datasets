@@ -6,8 +6,6 @@ import html5lib, json
 
 import encoding
 
-#TODO : data id 부여
-
 def read(url):
     with open(url, 'r') as f:
         parser = html5lib.HTMLParser(\
@@ -30,7 +28,6 @@ def sanitize(item, stops):
     for s in stops:
         item = item.replace(s, '')
     item = item.strip()
-    #item = item.replace(', ','|')
     return item
 
 def concat(rows, baseurl, urlhash):
@@ -47,12 +44,12 @@ def write(rows, attrs, outp):
             i += 1
 
 def main():
+    BASEURL = 'http://archive.ics.uci.edu/ml/'
     URL = 'datasets.html'
     OUTP = 'datasets.tsv'
     STOPS = [u'\n', u'\t', u' <td><p class="normal">', u'</p></td> ', u'&nbsp;']
     ATTRS = ['id', 'name', 'abstract', 'data_type', 'default_task', 'attribute_type',
             'n_instances', 'n_attrs', 'y', 'area', 'url']
-    BASEURL = 'http://archive.ics.uci.edu/ml/'
 
     root = read(URL)
     table = root.xpath('//table[@border="1"]//tr')
