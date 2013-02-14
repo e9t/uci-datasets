@@ -1,7 +1,7 @@
 # UCI Machine Learning Repository Data List
 
 ## Overview
-The list of data in the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets.html) in [TSV(Tab Separated Values) format](https://github.com/e9t/uci-datasets/blob/master/datasets.tsv).
+The list of data in the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets.html) in [TSV(Tab Separated Values) format](https://github.com/e9t/uci-datasets/blob/master/data-list.tsv).
 
 ## File description
 
