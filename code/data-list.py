@@ -45,8 +45,8 @@ def write(rows, attrs, outp):
 
 def main():
     BASEURL = 'http://archive.ics.uci.edu/ml/'
-    URL = 'datasets.html'
-    OUTP = 'datasets.tsv'
+    URL = 'archive.ics.uci.edu-ml-datasets-20130204.html'
+    OUTP = 'data-list.tsv'
     STOPS = [u'\n', u'\t', u' <td><p class="normal">', u'</p></td> ', u'&nbsp;']
     ATTRS = ['id', 'name', 'abstract', 'data_type', 'default_task', 'attribute_type',
             'n_instances', 'n_attrs', 'y', 'area', 'url']
