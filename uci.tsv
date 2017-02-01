@@ -1,4 +1,4 @@
-id	name	abstract	data_type	default_task	attribute_type	n_instances	n_attrs	y	area	url	
+id	name	abstract	data_type	default_task	attribute_type	n_instances	n_attrs	y	area	url
 1	Abalone	Predict the age of abalone from physical measurements	Multivariate	Classification	Categorical, Integer, Real	4177	8	1995	Life	http://archive.ics.uci.edu/ml/datasets/Abalone
 2	Adult	Predict whether income exceeds $50K/yr based on census data.  Also known as 'Census Income' dataset.	Multivariate	Classification	Categorical, Integer	48842	14	1996	Social	http://archive.ics.uci.edu/ml/datasets/Adult
 3	Annealing	Steel annealing data	Multivariate	Classification	Categorical, Integer, Real	798	38		Physical	http://archive.ics.uci.edu/ml/datasets/Annealing

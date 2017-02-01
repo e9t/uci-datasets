@@ -43,7 +43,7 @@ def concat(rows, baseurl, urlhash):
 
 def write(rows, attrs, outp):
     with open(outp, 'w') as f:
-        f.write('\t'.join(attrs + ['\n']))
+        f.write('\t'.join(attrs) + '\n')
         i = 1
         for row in rows:
             row = [r.replace('"', "'").replace('\n', ' ').replace('\r', ' ') for r in row]
