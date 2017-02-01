@@ -46,7 +46,7 @@ def write(rows, attrs, outp):
         f.write('\t'.join(attrs + ['\n']))
         i = 1
         for row in rows:
-            row = [r.replace('"', '\\"').replace('\n', ' ').replace('\r', ' ') for r in row]
+            row = [r.replace('"', "'").replace('\n', ' ').replace('\r', ' ') for r in row]
             row = '\t'.join([str(i)] + row)
             f.write(row.encode('utf-8'))
             f.write('\n')
