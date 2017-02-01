@@ -2,17 +2,22 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-import html5lib, json
+from datetime import datetime
+
+from lxml import html
 
 import encoding
 
-def read(url):
-    with open(url, 'r') as f:
-        parser = html5lib.HTMLParser(\
-                tree=html5lib.treebuilders.getTreeBuilder("lxml"),\
-                namespaceHTMLElements=False)
-        root = parser.parse(f)
-    return root
+
+ATTRS   = ['id', 'name', 'abstract', 'data_type', 'default_task', 'attribute_type',
+           'n_instances', 'n_attrs', 'y', 'area', 'url']
+BASEURL = 'http://archive.ics.uci.edu/ml/'
+ENCODING = 'utf8'
+OUTP    = 'uci.tsv'
+STOPS   = [u'\n', u'\t', u' <td><p class="normal">', u'</p></td> ', u'&nbsp;']
+TODAY   = datetime.today().strftime('%Y%m%d')
+URL     = 'archive.ics.uci.edu-ml-datasets-%s.html' % TODAY
+
 
 def parse(table, stops):
     rows = []
@@ -23,6 +28,7 @@ def parse(table, stops):
         rows.append(columns)
     return rows
 
+
 def sanitize(item, stops):
     item = encoding.to_unicode_or_bust(item)
     for s in stops:
@@ -30,35 +36,33 @@ def sanitize(item, stops):
     item = item.strip()
     return item
 
+
 def concat(rows, baseurl, urlhash):
     return [row + ["%s%s" % (baseurl, urlhash[row[0]])] for row in rows]
+
 
 def write(rows, attrs, outp):
     with open(outp, 'w') as f:
         f.write('\t'.join(attrs + ['\n']))
         i = 1
         for row in rows:
+            row = [r.replace('"', '\\"').replace('\n', ' ').replace('\r', ' ') for r in row]
             row = '\t'.join([str(i)] + row)
             f.write(row.encode('utf-8'))
             f.write('\n')
             i += 1
 
-def main():
-    BASEURL = 'http://archive.ics.uci.edu/ml/'
-    URL = 'archive.ics.uci.edu-ml-datasets-20130204.html'
-    OUTP = 'data-list.tsv'
-    STOPS = [u'\n', u'\t', u' <td><p class="normal">', u'</p></td> ', u'&nbsp;']
-    ATTRS = ['id', 'name', 'abstract', 'data_type', 'default_task', 'attribute_type',
-            'n_instances', 'n_attrs', 'y', 'area', 'url']
 
-    root = read(URL)
-    table = root.xpath('//table[@border="1"]//tr')
-    names = root.xpath('//p[@class="normal"]/b/a/text()')
-    urls = root.xpath('//p[@class="normal"]/b/a/@href')
-    urlhash = dict(zip(names, urls))
+# get uci data list
+root = html.parse('http://archive.ics.uci.edu/ml/datasets.html')
 
-    rows = parse(table, STOPS)
-    rows = concat(rows, BASEURL, urlhash)
-    write(rows, ATTRS, OUTP)
+# parse uci data list
+table = root.xpath('//table[@border="1"]//tr')
+names = [n.strip() for n in root.xpath('//p[@class="normal"]/b/a/text()')]
+urls = root.xpath('//p[@class="normal"]/b/a/@href')
+urlhash = dict(zip(names, urls))
+rows = parse(table, STOPS)
+rows = concat(rows, BASEURL, urlhash)
 
-main()
+# write parsed data to tsv
+write(rows, ATTRS, OUTP)
